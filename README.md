@@ -1,8 +1,17 @@
-# design
+# JupyterHub Design Assets
 
-A collection of design material for JupyterHub and related projects (Binder).
+A collection of design material for the JupyterHub organisation.
 
-This repo exists as a convenience for use in JupyterHub and related projects.
+Directories:
+
+## `binder`
+
+mybinder.org logos and other images
+
+## `jupyterhub`
+
+JupyterHub logos
+
 
 ## Project Jupyter Design Assets
 
