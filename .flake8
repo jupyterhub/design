@@ -10,7 +10,3 @@
 [flake8]
 max-line-length = 88
 extend-ignore = C, E, W
-
-# Adjustments to linting the binderhub repo
-builtins = c, load_subconfig
-exclude = versioneer.py,binderhub/_version.py
