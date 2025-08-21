@@ -15,6 +15,7 @@ def svg2png(source_file):
     target_file_name = source_file_name.replace(".svg", ".png")
     target_file_path = os.path.join(target_dir_name, target_file_name)
 
+    logger.info("Start writing PNG to %s ...", target_file_path)
     subprocess.run(
         [
             "inkscape",
@@ -24,6 +25,7 @@ def svg2png(source_file):
             source_file,
         ]
     )
+    logger.info("End writing PNG to %s ...", target_file_path)
 
 
 def svg2svg(source_file):
@@ -31,9 +33,10 @@ def svg2svg(source_file):
     source_dir_path = pathlib.Path(source_dir_name)
 
     target_dir_name = os.path.join("assets", *source_dir_path.parts[1:])
-    target_file_name = source_file_name.replace(".svg", ".png")
+    target_file_name = source_file_name
     target_file_path = os.path.join(target_dir_name, target_file_name)
 
+    logger.info("Start writing SVG to %s ...", target_file_path)
     subprocess.run(
         [
             "inkscape",
@@ -45,6 +48,7 @@ def svg2svg(source_file):
             source_file,
         ]
     )
+    logger.info("Start writing SVG to %s ...", target_file_path)
 
 
 if __name__ == "__main__":
@@ -87,5 +91,6 @@ if __name__ == "__main__":
 
         if args.all or args.svg:
             logger.info("Converting %s into SVG", _source_file)
+            svg2svg(_source_file)
 
         logger.info("End processing %s!", _source_file)
