@@ -10,11 +10,11 @@ The `*.png` and `.*svg` files to used. They are generated using [`build-assets.p
 
 ### Binder
 
-Assets of the [Binder] project is located in the [`assets/binder`](./assets/binder) directory.
+Assets of the [Binder] project are located in the [`assets/binder`](./assets/binder) directory.
 
 ### JupyterHub
 
-Assets of the [JupyterHub] project is located in the [`src/jupyterhub`](./src/jupyterhub) directory.
+Assets of the [JupyterHub] project are located in the [`src/jupyterhub`](./src/jupyterhub) directory.
 
 ## Source
 
@@ -22,11 +22,11 @@ The `.svg` files are provided for reproducibility. This files **must** only be c
 
 ### Binder
 
-Assets of the [Binder] project is located in the [`src/binder`](./src/binder) directory.
+Assets of the [Binder] project are located in the [`src/binder`](./src/binder) directory.
 
 ### JupyterHub
 
-Assets of the [JupyterHub] project is located in the [`assets/jupyterhub`](./assets/jupyterhub) directory.
+Assets of the [JupyterHub] project are located in the [`assets/jupyterhub`](./assets/jupyterhub) directory.
 
 ## Branding Guide
 
