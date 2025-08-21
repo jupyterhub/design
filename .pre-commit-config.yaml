@@ -1,0 +1,48 @@
+# pre-commit is a tool to perform a predefined set of tasks manually and/or
+# automatically before git commits are made.
+#
+# Config reference: https://pre-commit.com/#pre-commit-configyaml---top-level
+#
+# Common tasks
+#
+# - Run on all files:   pre-commit run --all-files
+# - Register git hooks: pre-commit install --install-hooks
+#
+repos:
+  # Autoformat: Python code, syntax patterns are modernized
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.20.0
+    hooks:
+      - id: pyupgrade
+        args:
+          - --py38-plus
+
+  # Autoformat: Python code
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+        # args are not passed, but see the config in pyproject.toml
+
+  # Autoformat: Python code
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+      - id: isort
+        # args are not passed, but see the config in pyproject.toml
+
+  # Autoformat: js, html, markdown, yaml, json
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.6.2
+    hooks:
+      - id: prettier
+
+  # Lint: Python code
+  - repo: https://github.com/PyCQA/flake8
+    rev: "7.3.0"
+    hooks:
+      - id: flake8
+
+# pre-commit.ci config reference: https://pre-commit.ci/#configuration
+ci:
+  autoupdate_schedule: monthly
