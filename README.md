@@ -20,6 +20,27 @@ Assets of the [JupyterHub] project are located in the [`src/jupyterhub`](./src/j
 
 The `.svg` files are provided for reproducibility. This files **must** only be consumed by [`build-assets.py`](./build-assets.py).
 
+### Usage Requirements
+
+- [Python](https://www.python.org/)
+- [Inkscape](https://inkscape.org/)
+- Myriad Pro from [`fontfen/myriad-pro` on GitHub](https://github.com/fontfen/myriad-pro)
+
+  On GNU/Linux,
+
+  ```bash
+  mkdir -p ~/.local/share/fonts/myriad-pro
+  git clone git@github.com:fontfen/myriad-pro.git
+  cd myriad-pro
+  cp *.ttf ~/.local/share/fonts/myriad-pro
+  ```
+
+### Usage
+
+```bash
+python build-assets.py --all
+```
+
 ### Binder
 
 Assets of the [Binder] project are located in the [`src/binder`](./src/binder) directory.
