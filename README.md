@@ -16,6 +16,10 @@ Assets of the [Binder] project are located in the [`assets/binder`](./assets/bin
 
 Assets of the [JupyterHub] project are located in the [`src/jupyterhub`](./src/jupyterhub) directory.
 
+### repo2docker
+
+Assets of the [repo2docker] project are located in the [`src/repo2docker`](./src/repo2docker) directory.
+
 ## Source
 
 The `.svg` files are provided for reproducibility. This files **must** only be consumed by [`build-assets.py`](./build-assets.py).
@@ -43,11 +47,15 @@ python build-assets.py --all
 
 ### Binder
 
-Assets of the [Binder] project are located in the [`src/binder`](./src/binder) directory.
+The source file of assets of the [Binder] project are located in the [`assets/binder`](./assets/binder) directory.
 
 ### JupyterHub
 
-Assets of the [JupyterHub] project are located in the [`assets/jupyterhub`](./assets/jupyterhub) directory.
+The source file of assets of the [JupyterHub] project are located in the [`assets/jupyterhub`](./assets/jupyterhub) directory.
+
+### JupyterHub
+
+The source file of assets of the [repo2docker] project are located in the [`assets/repo2docker`](./assets/repo2docker) directory.
 
 ## Branding Guide
 
@@ -80,12 +88,23 @@ The JupyterHub brand follows the Jupyter branding guide.
 | Medium Grey      | `#757575`               |
 | Grey             | `#9E9E9E`               |
 
+### repo2docker
+
+#### Color Palette
+
+| Color name          | Hexadecimal color codes |
+| ------------------- | ----------------------- |
+| repo2docker blue    | `#20c2ef`               |
+| repo2docker green   | `#bff2ff`               |
+| repo2docker black   | `#394d54`               |
+
 #### Typography
 
 [Myriad](<https://en.wikipedia.org/wiki/Myriad_(typeface)>) Pro is used.
 
 [Binder]: https://jupyter.org/binder
+[Jupyter Foundation]: https://jupyterfoundation.org/
 [Jupyter]: https://jupyter.org/
 [JupyterHub]: https://jupyter.org/hub
-[Jupyter Foundation]: https://jupyterfoundation.org/
+[repo2docker]: https://repo2docker.readthedocs.io/
 [The Linux Foundation]: https://www.linuxfoundation.org/
