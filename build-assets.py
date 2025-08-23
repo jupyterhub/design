@@ -7,7 +7,7 @@ import subprocess
 logger = logging.getLogger(__name__)
 
 
-def svg2png(source_file):
+def svg2png(source_file, height=50):
     source_dir_name, source_file_name = os.path.split(source_file)
     source_dir_path = pathlib.Path(source_dir_name)
 
@@ -22,6 +22,7 @@ def svg2png(source_file):
             f"--export-filename={target_file_path}",
             "--export-type=png",
             "--export-area-page",
+            f"--export-height={height}",
             source_file,
         ]
     )
@@ -63,9 +64,12 @@ if __name__ == "__main__":
     output_group.add_argument("--svg", help="SVG", action="store_true")
     output_group.add_argument("--all", help="All output formats", action="store_true")
 
+    parser.add_argument("--height", help="height of PNG", type=int, default=50)
+
     parser.add_argument(
         "-v", "--verbose", help="increase output verbosity", action="store_true"
     )
+
     parser.add_argument("source", nargs="*")
 
     args = parser.parse_args()
@@ -87,7 +91,7 @@ if __name__ == "__main__":
 
         if args.all or args.png:
             logger.info("Converting %s into PNG", _source_file)
-            svg2png(_source_file)
+            svg2png(_source_file, args.height)
 
         if args.all or args.svg:
             logger.info("Converting %s into SVG", _source_file)
